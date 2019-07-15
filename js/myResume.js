@@ -357,6 +357,10 @@ let messageRender = (function () {
           }
       }
   })();
+  /*以后再真实项目中，如果页面中有滑动的需求，我们一定要把documen本身滑动的默认行为阻止掉不阻止：浏览器中预览，会触发下拉刷新或者左右滑动切换页卡等功能）*/
+$(document).on('touchstart touchmove touchend',(ev)=>{
+    ev.preventDefault();
+});
 //=>在开发的过程中，由于开发的项目板块过多，（每个板块都是一个单例）我们最好规划一中机制，通过标识可以让程序运行那一种板块的内容，（哈希路由控制）
 let url=window.location.href,
     well=url.indexOf('#'),
