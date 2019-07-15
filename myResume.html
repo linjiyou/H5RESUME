@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myResume</title>
+    <!--IMPORT CSS-->
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="css/reset.min.less">
+    <link rel="stylesheet" href="css/myResume.min.css">
+    <!--PRE-FIX-FREE:设置前缀的插件-->
+    <script src="js/prefixfree.min.js"></script>
+    <script>
+        ~function(window){
+            //=>根据当前设备的宽度,动态计算出REM的换算比例,实现页面中元素的等比缩放
+            let computerREM=function computerREM(){
+               let desW=640,
+                   winW=document.documentElement.clientWidth;
+               if(winW>=640){
+                   document.documentElement.style.fontSize = '100px';
+                   return;
+               }
+               document.documentElement.style.fontSize=winW/desW*100+'px';
+            };
+            computerREM();
+            window.addEventListener('resize',computerREM);
+        }(window)
+    </script>
+
+</head>
+<body>
+<main class="mainBox">
+    <!--LOADING-->
+    <section class="loadingBox">
+        <div class="title">
+            <h1>应聘前端开发工程师</h1>
+            <h2>H5场景交互型简历</h2>
+        </div>
+        <div class="progress">
+            <div class="current"></div>
+        </div>
+    </section>
+    <!--PHONE-->
+    <section class="phoneBox">
+        <h2>
+            <img src="img/zf_phoneLogo.png" alt="">
+            <span>00:00</span>
+        </h2>
+        <div class="answer">
+            <div class="markMove"></div>
+            <a href="javascript:;" class="markLink"></a>
+        </div>
+        <div class="hang">
+            <a href="javascript:;" class="markLink"></a>
+        </div>
+        <!--AUDIO-->
+        <audio src="audio/bell.mp3" loop preload="none" id="answerBell"></audio>
+        <audio src="audio/say.mp3" preload="none" id="introduction"></audio>
+         </section>
+    <!--MESSAGE-->
+    <section class="messageBox">
+        <ul class="wrapper clearfix">
+            <li class="self">
+                <i class="arrow"></i>
+                <img src="img/zf_messageStudent.png" alt="" class="pic">
+               面试官您好，我叫林计友，来自广东阳江，2020年毕业于广东工贸职业学院，学习的是计算机应用专业，工作经验无。
+            </li>
+            <li class="inter">
+                <i class="arrow"></i>
+                <img src="img/zf_messageLogo.png" alt="" class="pic">
+                介绍一下自己的专业技能吧
+            </li>
+            <li class="self">
+                <i class="arrow"></i>
+                <img src="img/zf_messageStudent.png" alt="" class="pic">
+                之前的公司使用的是REACT开发，个人对于REACT渲染原理、MVC模式、SPA单页面应用、DIFF差异渲染机制以及REDUX原理等都有研究，掌握的很熟练，对于VUE之前也做过，如果公司需要可以快速入手
+            </li>
+            <li class="inter">
+                <i class="arrow"></i>
+                <img src="img/zf_messageLogo.png" alt="" class="pic">
+                webpack会吗？
+            </li>
+            <li class="self">
+                <i class="arrow"></i>
+                <img src="img/zf_messageStudent.png" alt="" class="pic">
+                之前项目都是基于脚手架完成的，自己偶尔去修改一些webpack配置项
+            </li>
+            <li class="self">
+                <i class="arrow"></i>
+                <img src="img/zf_messageStudent.png" alt="" class="pic">
+                不过目前正在深入研究，可以搭建简单的脚手架
+            </li>
+            <li class="self">
+                <i class="arrow"></i>
+                <img src="img/zf_messageStudent.png" alt="" class="pic">
+                同时对于NODE/EXPRESS等后台开发也有所涉猎，只是没有应用到项目实战中，目前也正在研究，对这个比较感兴趣
+            </li>
+            <li class="inter">
+                <i class="arrow"></i>
+                <img src="img/zf_messageLogo.png" alt="" class="pic">
+                你认为你的优点在于哪？和其他人对比，公司为啥要录用你！
+            </li>
+            <li class="self">
+                <i class="arrow"></i>
+                <img src="img/zf_messageStudent.png" alt="" class="pic">
+                肯吃苦、肯加班、能力高、要钱少...这些够吗?
+            </li>
+            <li class="inter">
+                <i class="arrow"></i>
+                <img src="img/zf_messageLogo.png" alt="" class="pic">
+                就是你啦，明天来上班！
+            </li>
+
+        </ul>
+        <div class="keyBoard">
+            <span></span><!--好的，马上介绍！-->
+            <a href="javascript:;" class="submit"></a>
+        </div>
+        <audio src="audio/music.mp3" preload="none" loop id="demonMusic"></audio>
+    </section>
+    <!--CUBE-->
+    <section class="cubeBox">
+        <ul class="cube">
+            <li><img src="img/zf_cube1.png" alt=""></li>
+            <li><img src="img/zf_cube2.png" alt=""></li>
+            <li><img src="img/zf_cube3.png" alt=""></li>
+            <li><img src="img/zf_cube4.png" alt=""></li>
+            <li><img src="img/zf_cube5.png" alt=""></li>
+            <li><img src="img/zf_cube6.png" alt=""></li>
+        </ul>
+        <img src="img/zf_cubeTip.png" alt="" class="tip">
+    </section>
+    <!--DETAIL-->
+    <section class="detailBox">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide page1" >
+                <dl>
+                    <dt>课程大纲</dt>
+                    <dd>
+                        <em>01</em>
+                        <a href="#">html(5)+css(3)+移动端响应式布局开发及相关插件的使用</a>
+                    </dd>
+                    <dd>
+                        <em>02</em>
+                        <a href="#">js中的闭包及堆栈内存以及this的处理</a>
+                    </dd>
+                    <dd>
+                        <em>03</em>
+                        <a href="#">js中的面向对象编程，可以基于面向对象封装组件和插件等</a>
+                    </dd>
+                    <dd>
+                        <em>04</em>
+                        <a href="#">es6中的新特性及数组对象里面的常用方法</a>
+                    </dd>
+                    <dd>
+                        <em>05</em>
+                        <a href="#">js中的同步异步编程及promise设计模式</a>
+                    </dd>
+                    <dd>
+                        <em>06</em>
+                        <a href="#">js中的事件委托及事件池及发布订阅模式</a>
+                    </dd>
+                    <dd>
+                        <em>07</em>
+                        <a href="#">js中的dom操作以及重绘和回流的优化</a>
+                    </dd>
+                    <dd>
+                        <em>08</em>
+                        <a href="#">http交互及阿加西库的封装以及跨域数据共享</a>
+                    </dd>
+                    <dd><em>09</em><a href="#">VUE:VUE-CLI/VUE-ROUTER/VUEX/VUE ELEMENT等全家桶</a></dd>
+                    <dd><em>10</em><a href="#">REACT:REACT-ROUTER/REACT-REDUX/DVA/AXIOS/ANT等</a></dd>
+                    <dd><em>11</em><a href="#">辅助技能：NODE/WEBPACK/GIT等</a></dd>
+                </dl>
+            </div>
+            <div class="swiper-slide page2">
+                <h2>课程体系</h2>
+                <img src="img/zf_course1.png" alt="">
+                <img src="img/zf_course2.png" alt="">
+                <img src="img/zf_course3.png" alt="">
+                <img src="img/zf_course4.png" alt="">
+                <img src="img/zf_course5.png" alt="">
+                <img src="img/zf_course6.png" alt="">
+                <img src="img/zf_course.png" alt="">
+            </div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            </div>
+        </div>
+    </section>
+
+</main>
+<!--IMPORT JS-->
+<script src="js/zepto.min.js"></script>
+<script src="js/swiper-3.4.2.jquery.min.js"></script>
+<script src="js/makisu.min.js"></script>
+<script src="js/myResume.js"></script>
+</body>
+</html>
